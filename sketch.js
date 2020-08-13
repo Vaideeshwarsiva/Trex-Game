@@ -70,8 +70,9 @@ function setup() {
 
 function draw() {
   background(180);
+  textSize(30);
   text("Score: " + score, 500, 50);
-  text("Highscore: " + highscore,100,50);
+  text("Highscore: " + highscore,200,200);
   
   if(highscore < score){
     highscore = score;
