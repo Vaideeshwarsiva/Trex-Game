@@ -9,6 +9,7 @@ var END = 0;
 var gameState = PLAY;
 
 var score;
+var highscore;
 
 var gameOver;
 var gameOverImage
@@ -70,6 +71,12 @@ function setup() {
 function draw() {
   background(180);
   text("Score: " + score, 500, 50);
+  text("Highscore: " + highscore,100,50);
+  
+  if(highscore < score){
+    highscore = score;
+  }
+  
   trex.collide(invisibleGround);
   
   if (gameState == PLAY) {
